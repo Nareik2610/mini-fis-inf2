@@ -28,7 +28,7 @@ std::string Display::getText() const
 void Display::show() const
 {
     // TODO
-    std::cout<<getText<<std::endl;
+    std::cout << getText() << std::endl;
 
     // Geben Sie das Ergebnis von `getText()` auf der Konsole aus.
 

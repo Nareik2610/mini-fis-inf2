@@ -9,13 +9,13 @@ Reservation::Reservation(std::string const& from, std::string const& to)
 bool Reservation::isEmpty() const
 {
     // TODO
-
-    return false;
+    
+    return from.empty() && to.empty();
 }
 
 std::string Reservation::getDisplayText() const
 {
     // TODO
 
-    return "";
+    return from +  " - " + to;
 }
