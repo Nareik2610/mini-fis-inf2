@@ -38,6 +38,10 @@ void Coach::updateSeatDisplay(std::string const& seatId, std::string const& newT
    for( auto & [id,display]: seat_displays){
     if (id==seatId){
        display.updateText(newText);
+       return;
+    }
+    else{
+        std::cout<<"Fehler"<<std::endl;
     }
   }
 
@@ -47,14 +51,23 @@ void Coach::updateSeatDisplay(std::string const& seatId, std::string const& newT
 void Coach::showCeilingDisplays() const
 {
     // TODO
+    for (const auto& display : ceiling_displays) {
+        display.show();
+    }
 }
 
 void Coach::showSeatDisplays() const
 {
-    // TODO
+    // TODO 
+    for (const auto& [seatId, display] : seat_displays) {
+        display.show();
+    }
 }
 
 void Coach::showAllDisplays() const
 {
-    // TODO
+   
+    showCeilingDisplays();
+    showSeatDisplays();
+   
 }
